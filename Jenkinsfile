@@ -10,7 +10,7 @@ pipeline {
         stage('Git-checkout') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gijju80/awsdevops.git']])
-                echo $BRANCH_NAME
+                echo ${MAIN_BRANCH_NAME}
             }
         }
         
@@ -31,9 +31,10 @@ pipeline {
         }
         
    stage('Deploy') {
-    when { branch 'main' }
+       if  (${MAIN_BRANCH_NAME} = 'main'){
     steps {
       echo 'Deploy prod'
+    }
     }
   }
     }
