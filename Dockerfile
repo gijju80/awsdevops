@@ -1,4 +1,4 @@
-FROM hshar/webapp
+FROM ubuntu:latest
 
 RUN rm /var/www/html/index.html
 
