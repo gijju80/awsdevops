@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    
+    environment {
+        
+     MAIN_BRANCH_NAME = 'main'   
+    }
 
     stages {
         stage('Git-checkout') {
@@ -26,7 +31,7 @@ pipeline {
         }
         
    stage('Test') {
-       if ($BRANCH_NAME == 'main') {
+       if (MAIN_BRANCH_NAME == 'main') {
             steps {
                 echo "Deploy in Prod"
                 
