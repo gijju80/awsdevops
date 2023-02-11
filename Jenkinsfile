@@ -28,9 +28,9 @@ pipeline {
    stage('Test') {
        if ($BRANCH_NAME == 'main') {
             steps {
-                echo "Deplot in Prod"
+                echo "Deploy in Prod"
                 
-                
+            }
             }
         }
     }
