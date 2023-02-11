@@ -10,7 +10,15 @@ pipeline {
         
   stage('Build') {
             steps {
-                echo "Bild is success"
+                echo "Build is success"
+                
+                
+            }
+        }
+        
+  stage('Test') {
+            steps {
+                echo "Test is success"
                 
                 
             }
