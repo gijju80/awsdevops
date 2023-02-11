@@ -31,11 +31,11 @@ pipeline {
         }
         
    stage('Test') {
-       if (MAIN_BRANCH_NAME == 'main') {
-            steps {
-                echo "Deploy in Prod"
+       steps {
+           if (MAIN_BRANCH_NAME == 'main') {
+            echo "Deploy in Prod"
                 
-            }
+                 }
             }
         }
     }
