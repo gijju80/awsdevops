@@ -4,6 +4,7 @@ pipeline {
     environment {
         
      MAIN_BRANCH_NAME = 'main'   
+      DEV_BRANCH_NAME = 'DEV'
     }
 
     stages {
