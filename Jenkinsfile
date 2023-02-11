@@ -31,13 +31,16 @@ pipeline {
         }
         
    stage('Deploy') {
-      
-    
-         if(MAIN_BRANCH_NAME == 'main'){
-             steps {
-      echo 'Deploy prod'
-    }
-    }
-  }
+       steps {
+           script {
+               if (MAIN_BRANCH_NAME == 'main') {
+                   echo 'env.MAIN_BRANCH_NAME'
+                   echo 'Deploying to Prod'
+               }
+           }
+       }
+   }
     }
 }
+          
+      
