@@ -10,7 +10,7 @@ pipeline {
         stage('Git-checkout') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gijju80/awsdevops.git']])
-                echo $MAIN_BRANCH_NAME
+                echo env.MAIN_BRANCH_NAME
             }
         }
         
