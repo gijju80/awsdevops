@@ -37,6 +37,9 @@ pipeline {
                    echo env.MAIN_BRANCH_NAME
                    echo 'Deploying to Prod'
                }
+               else {
+                   echo "It's Dev Branch"
+                  
            }
        }
    }
