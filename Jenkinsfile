@@ -8,8 +8,7 @@ pipeline {
             }
         }
         
-   stages {
-        stage('Build') {
+  stage('Build') {
             steps {
                 echo "Bild is success"
                 
