@@ -34,7 +34,7 @@ pipeline {
    stage('Deploy') {
        steps {
            script {
-               if (MAIN_BRANCH_NAME != 'main') {
+               if (MAIN_BRANCH_NAME == 'main') {
                    echo env.MAIN_BRANCH_NAME
                    echo 'Deploying to Prod'
                }
