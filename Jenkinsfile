@@ -32,8 +32,9 @@ pipeline {
         
    stage('Deploy') {
       
-    steps {
+    
          if(MAIN_BRANCH_NAME == 'main'){
+             steps {
       echo 'Deploy prod'
     }
     }
