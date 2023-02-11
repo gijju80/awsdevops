@@ -14,7 +14,7 @@ pipeline {
   stage('Build') {
             steps {
                 
-                sh 'docker build -t MyDockerImage:v1'
+                sh 'docker build -t mydockerimage:v1'
                 echo "Build is success"
                 
                 
